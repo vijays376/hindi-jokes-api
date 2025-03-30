@@ -1,4 +1,4 @@
-# [Hindi Jokes API](https://random-gif-v1.netlify.app/)
+# [Hindi Jokes API](https://hindi-jokes-api-rm0c.onrender.com)
 
 A fun and entertaining **REST API** serving hundreds of Hindi jokes across various popular categories, including **Pati-Patni, Teacher-Student, GF-BF, Mazedar, Chutkule, and more!**
 
@@ -20,39 +20,45 @@ A fun and entertaining **REST API** serving hundreds of Hindi jokes across vario
 https://hindi-jokes-api-rm0c.onrender.com
 ```
 
-### 1. Get a Random Joke
+### 1. Get a Joke
 ```
-GET /api/jokes/random
+GET /jokes
 ```
 _Response:_
 ```json
 {
+  "_id": "67e94dd4c765f116565e3a97",
+  "jokeNo": 1,
   "category": "Pati-Patni",
-  "joke": "पति: जानू, मैं तुम्हारे बिना जी नहीं सकता!\nपत्नी: तो मर क्यों नहीं जाते?"
+  "jokeContent": "पति: जानू, मैं तुम्हारे बिना जी नहीं सकता!\nपत्नी: तो मर क्यों नहीं जाते?",
+  "__v": 0
 }
 ```
 
 ### 2. Get Jokes by Category
 ```
-GET /api/jokes/category/:categoryName
+GET /jokes/category/:categoryName
 ```
 Example:
 ```
-GET /api/jokes/category/teacher-student
+GET /jokes/category/teacher-student
 ```
 _Response:_
 ```json
 [
   {
+    "_id": "67e94dd4c765f116565e3a98",
+    "jokeNo": 2,
     "category": "Teacher-Student",
-    "joke": "टीचर: परीक्षा में नकल क्यों की?\nस्टूडेंट: ताकि पास होकर आपकी क्लास में ना आना पड़े!"
+    "jokeContent": "टीचर: परीक्षा में नकल क्यों की?\nस्टूडेंट: ताकि पास होकर आपकी क्लास में ना आना पड़े!",
+    "__v": 0
   }
 ]
 ```
 
 ### 3. Get All Categories
 ```
-GET /api/jokes/categories
+GET /jokes/categories
 ```
 _Response:_
 ```json
@@ -68,20 +74,22 @@ _Response:_
 
 ### 4. Get Jokes by Size
 ```
-GET /api/jokes?size=number
+GET /jokes?size=number
 ```
 Example:
 ```
-GET /api/jokes?size=10
+GET /jokes?size=10
 ```
 _Response:_
 ```json
 [
   {
+    "_id": "67e94dd4c765f116565e3a99",
+    "jokeNo": 3,
     "category": "Pati-Patni",
-    "joke": "पति: शादी के पहले तुम मेरी हर बात मानती थी!\nपत्नी: शादी के पहले तुम हर बात ठीक ही तो बोलते थे!"
+    "jokeContent": "पति: शादी के पहले तुम मेरी हर बात मानती थी!\nपत्नी: शादी के पहले तुम हर बात ठीक ही तो बोलते थे!",
+    "__v": 0
   },
-  ... (9 more jokes)
 ]
 ```
 
